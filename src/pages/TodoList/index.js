@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import List from './components/List';
 import AddItem from './components/AddItem';
+// import Progress from './components/Progress';
 
 
 const  TodoList = () =>{
     const [data, setData] = useState([]);
-    console.log(data); // 确保更新后的列表正确
-
-
+    // console.log(data); 
     return (
 
 
@@ -16,7 +15,11 @@ const  TodoList = () =>{
                 <h1>TodoList</h1>
                 <span>Add things to do</span>
             </div>
-                <List listData={data}/>
+                {/* <Progress/> */}
+                <List listData={data} 
+                      changeData={setData} 
+                      
+                />
             <div>
                 <AddItem add={setData}/>
             </div>

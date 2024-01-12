@@ -4,15 +4,19 @@ const  AddItem = ({add}) =>{
 
 
     const [note, setNote] = useState('');
+    const [Index, setIndex] = useState(0);
+
     function  noteChange(e){
         setNote(e.target.value);
     }
 
     function addItem() {
         add(function (prevNotesList) {
+            //新增list
             if (note !== '') { 
-                const updatedList = [...prevNotesList, {note,id:v4()}];
+                const updatedList = [...prevNotesList, {note,id:v4(),Checked:false,originalOrder:Index}];
                 console.log(updatedList); 
+                setIndex(Index + 1);
                 return updatedList;
                
             } else {
