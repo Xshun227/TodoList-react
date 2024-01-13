@@ -91,7 +91,8 @@
     vertical-align: middle;
   }
   .progress>div:first-child{
-    width: 50px;
+    width: 40px;
+    text-align: center;
   }
   .progressBar{
     
@@ -110,7 +111,7 @@
     align-items: center;
     justify-content:start;
      width: 350px;
-     height: 46px;
+     height: 45px;
      margin: 5px 0px 5px 0px  ;
   }
   .blueBlock{
@@ -172,8 +173,8 @@
   }
   
   .checkboxContainer .checkmark:after {
-    left: 6px; 
-    top: 3px; 
+    left: 7px; 
+    top: 4px; 
     width: 4px;
     height: 8px;
     border: solid white;
@@ -181,6 +182,7 @@
     transform: rotate(45deg);
   }
   .noteText{
+    text-align: left;
     width: 300px;
     font-size: 15px;
   }
@@ -214,6 +216,7 @@
     transform: translate(-50%, -50%) rotate(-45deg);
   }
   .sortContainer{
+    margin-bottom: 50px;
    width: 350px;
    display: flex;
   justify-content: end;
@@ -300,6 +303,7 @@
   }
   .addItem{
     padding-bottom: 30px;
+    
   }
   .addItem>span{
     margin-bottom: 5px;
@@ -307,11 +311,22 @@
    color: rgb(131,144,183)
   }
 .addItem input{
+    /* vertical-align:top; */
+    display:inline-block;
     font-size: 15px;
     color: rgb(123, 143, 200);
     margin-right:10px ;
+    padding-left:4px ;
+    padding-bottom: 30px;
+    line-height: 25px;
  width: 290px;
- height: 40px;
+ /* height: 40px; */
+ outline: none;
+ border: 1px solid #3a3838;
+}
+.addItem input:focus{
+    outline: none;
+    border: 1px solid rgb(118, 142, 207);
 }
 .addItem button {
     position: relative;

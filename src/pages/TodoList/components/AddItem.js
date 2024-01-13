@@ -30,7 +30,7 @@ const  AddItem = ({add}) =>{
     return (
         <div className='addItem'>
             <span>Add to list</span>
-            <input type="text" value={note} onChange={noteChange} />
+            <input type="text" maxlength="35" value={note} onChange={noteChange} />
             <button onClick={addItem}></button>
         </div>
     );
