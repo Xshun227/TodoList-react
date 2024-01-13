@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import List from './components/List';
 import AddItem from './components/AddItem';
-// import Progress from './components/Progress';
+import "./index.css";
 
 
 const  TodoList = () =>{
@@ -10,19 +10,17 @@ const  TodoList = () =>{
     return (
 
 
-        <div>
-            <div>
-                <h1>TodoList</h1>
+        <div className='todolist'>
+            <div className='title' >
+                <h1>Todo List</h1>
                 <span>Add things to do</span>
             </div>
-                {/* <Progress/> */}
                 <List listData={data} 
                       changeData={setData} 
-                      
                 />
-            <div>
+            
                 <AddItem add={setData}/>
-            </div>
+          
         </div>
     )
      

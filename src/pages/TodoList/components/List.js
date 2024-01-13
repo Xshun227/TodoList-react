@@ -42,13 +42,14 @@ const List = ({ listData, changeData }) => {
 
   return (
     <div className="list">
-      <div>
+     <div className='listBorder'>
         <Progress listData={listData} />
+        <div className='itemContainer'>
           {sortedListData.map((item) => {
             const { note, id } = item;
 
             return (
-              <div key={id}>
+              <div  key={id}>
                 <Item
                   id={id}
                   note={note}
@@ -58,6 +59,7 @@ const List = ({ listData, changeData }) => {
               </div>
             );
           })}
+          </div>
       </div>
 
       <FinishSort

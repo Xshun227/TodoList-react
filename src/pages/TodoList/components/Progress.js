@@ -15,15 +15,16 @@ const Progress = ({ listData }) => {
   }, [listData]);
   const progressStyle = {
     width: `${checkPercent}%`,
-    height: '100%',
-    backgroundColor: 'rgba(147, 171, 251,0.9)',  
+    height: '15px',
+    backgroundColor: 'rgba(147, 171, 251,0.9)',
+    borderRadius:'50px',
     transition: 'width 0.3s ease',  
   };
 
   return (
-    <div >
+    <div className='progress'>
       <div style={{ }}>{`${checkPercent>0 ? checkPercent:0}%`}</div>
-      <div style={{height: '20px', backgroundColor: '#eee' }}>
+      <div className='progressBar' >
         <div style={progressStyle}></div>
       </div>
     </div>

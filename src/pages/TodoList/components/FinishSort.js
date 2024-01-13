@@ -29,9 +29,9 @@ const FinishSort = ({ listData ,onSwitchChange  }) => {
   };
 
   return (
-    <div>
+    <div className='sortContainer checkbox-wrapper-2'>
       <label>Move done things to end?</label>
-      <input className='aa' type="checkbox" onChange={toggleSwitch} />
+      <input className='sortCheckbox sc-gJwTLC ikxBAC ' type="checkbox" onChange={toggleSwitch} />
     </div>
   );
 };

@@ -28,9 +28,10 @@ const  AddItem = ({add}) =>{
     }
     
     return (
-        <div>
+        <div className='addItem'>
+            <span>Add to list</span>
             <input type="text" value={note} onChange={noteChange} />
-            <button onClick={addItem}>Add</button>
+            <button onClick={addItem}></button>
         </div>
     );
            

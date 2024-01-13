@@ -1,0 +1,343 @@
+*{
+    padding: 0; 
+    margin: 0; 
+    font-weight:normal; 
+    vertical-align:middle;
+  }
+
+.todolist{
+    margin-top:60px;
+    padding-left: 25px;
+    background: linear-gradient(rgb(239,246,254),rgb(236,242,254) ,rgb(237,241,253), rgb(236,237,255));
+    font-weight:600;
+    width: 400px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0%);
+    
+   
+}
+.title{
+    padding-top: 40px; 
+  
+}
+.title>h1{
+    font-size: 22px;
+   color: rgb(131,144,183);
+   margin-bottom: 1px;
+
+}
+.title>span{
+    font-size: 10px;
+    color: rgb(197,209,224);
+   
+}
+.listBorder{
+    position: relative;
+}
+
+.listBorder::before,
+.listBorder::after {
+  content: "";
+  display: block;
+  width: 350px;
+  position: relative;
+  height: 2px;
+  background-color: rgb(186, 195, 209);
+  margin-top: 5px; 
+  margin-bottom: 5px; 
+}
+.listBorder::after {
+    margin-top: 8px;
+    margin-bottom: 8px; 
+
+}
+.itemContainer{
+     height: 250px;
+    /* max-height: 250px; */
+    overflow-y: auto;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    height: 4px;
+  }
+  
+::-webkit-scrollbar-track {
+    width: 6px;
+   
+    border-radius: 2em;
+  }
+  
+::-webkit-scrollbar-thumb {
+    background-color: rgb(205,211,245);
+    background-clip: padding-box;
+    min-height: 28px;
+     -webkit-border-radius: 2em; 
+     -moz-border-radius: 2em; 
+    border-radius: 2em;
+    transition: background-color .3s;
+    cursor: pointer;
+  }
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(150, 159, 214);
+    
+  }
+  .progress{
+    color: rgb(150,181,252);
+    margin: 20px 0 15px 0;
+    display:flex;
+    font-size: 15px;
+    height: 25px;
+    vertical-align: middle;
+  }
+  .progress>div:first-child{
+    width: 50px;
+  }
+  .progressBar{
+    
+    width:300px;
+    height: 15px; 
+    background-color: #fff; 
+    border-radius:50px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .item{
+    background-color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content:start;
+     width: 350px;
+     height: 46px;
+     margin: 5px 0px 5px 0px  ;
+  }
+  .blueBlock{
+  height: 100%;
+  position: relative;
+  width:7px ;
+  background-color:rgb(123,143,200) ;
+  left: 0;
+  border-radius: 6px 0 0 6px;
+  border: none;
+  }
+  .checkboxContainer{
+    margin: 0 15px;
+    padding-left: 20px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .checkboxContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  .checkmark {
+    border-radius: 4px;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    height: 20px;
+    width: 20px;
+    border: 1px solid rgb(186, 195, 209);
+    background-color: #fff;
+  }
+  
+  .checkboxContainer:hover input ~ .checkmark {
+    background-color: #fff;
+  }
+  
+  .checkboxContainer input:checked ~ .checkmark {
+    background-color: rgb(120, 142, 223);
+  }
+  
+  .checkboxContainer .checkmark:after {
+    content: "";
+    position: absolute;
+    display: block; 
+  }
+  
+  .checkboxContainer input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .checkboxContainer .checkmark:after {
+    left: 6px; 
+    top: 3px; 
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+  .noteText{
+    width: 300px;
+    font-size: 15px;
+  }
+  .deletButton {
+    margin-right: 10px;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .deletButton::before,
+  .deletButton::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3px;
+    height: 15px;
+    background-color: rgb(206,213,241);
+    border-radius: 5px;
+  }
+  
+  .deletButton::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  
+  .deletButton::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  .sortContainer{
+   width: 350px;
+   display: flex;
+  justify-content: end;
+  align-items: center;
+  color:rgb(131,144,183) ;
+  font-size: 12px;
+  
+  }
+  .sortContainer>label{
+    margin: 5px 10px;
+    
+  }
+.addItem{
+    display: block;
+    width: 100%;
+}
+  
+
+
+
+  .checkbox-wrapper-2 .ikxBAC {
+    appearance: none;
+    background-color: #dfe1e4;
+    border-radius: 72px;
+    border-style: none;
+    flex-shrink: 0;
+    height: 20px;
+    margin: 0;
+    position: relative;
+    width: 30px;
+  }
+
+  .checkbox-wrapper-2 .ikxBAC::before {
+    bottom: -6px;
+    content: "";
+    left: -6px;
+    position: absolute;
+    right: -6px;
+    top: -6px;
+  }
+
+  .checkbox-wrapper-2 .ikxBAC,
+  .checkbox-wrapper-2 .ikxBAC::after {
+    transition: all 100ms ease-out;
+  }
+
+  .checkbox-wrapper-2 .ikxBAC::after {
+    background-color: #fff;
+    border-radius: 50%;
+    content: "";
+    height: 14px;
+    left: 3px;
+    position: absolute;
+    top: 3px;
+    width: 14px;
+  }
+
+  .checkbox-wrapper-2 input[type=checkbox] {
+    cursor: default;
+  }
+
+  .checkbox-wrapper-2 .ikxBAC:hover {
+    cursor: pointer;
+
+    background-color: #c9cbcd;
+    transition-duration: 0s;
+  }
+
+  .checkbox-wrapper-2 .ikxBAC:checked {
+    background-color: rgb(203,211,242);
+  }
+
+  .checkbox-wrapper-2 .ikxBAC:checked::after {
+    background-color: #fff;
+    left: 13px;
+  }
+
+  .checkbox-wrapper-2 :focus:not(.focus-visible) {
+    outline: 0;
+  }
+
+  .checkbox-wrapper-2 .ikxBAC:checked:hover {
+    background-color: rgb(203,211,242);
+  }
+  .addItem{
+    padding-bottom: 30px;
+  }
+  .addItem>span{
+    margin-bottom: 5px;
+    display: block;
+   color: rgb(131,144,183)
+  }
+.addItem input{
+    font-size: 15px;
+    color: rgb(123, 143, 200);
+    margin-right:10px ;
+ width: 290px;
+ height: 40px;
+}
+.addItem button {
+    position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    width: 50px;
+    height: 40px;
+    background-color: rgb(118, 142, 207);
+    overflow: hidden; 
+}
+.addItem button::before,
+.addItem button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 25px;
+  background-color: #FFF;
+  border-radius: 4px;
+}
+.addItem button::before {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  
+  .addItem button::after {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }

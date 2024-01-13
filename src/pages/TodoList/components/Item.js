@@ -27,15 +27,19 @@ const Item = ({ id, note, changeData }) => {
     }
 
     return (
-        <div>
-            <div></div>
-            <input type="checkbox" onChange={checkboxChange} checked={Checked}></input>
-            <label
+        <div className='item'>
+            <div className='blueBlock'></div>
+            <label className='checkboxContainer'>
+                <input type="checkbox" onChange={checkboxChange} checked={Checked}></input>
+                <span className='checkmark'></span>
+            </label>
+            <div className='noteText'
                 style={{
-                    textDecoration: Checked ? 'line-through' : 'none'
+                    textDecoration: Checked ? 'line-through' : 'none',
+                    color: Checked ? 'rgba(123,143,200,0.8)' : 'rgb(123,143,200)'
                 }}
-            > {note}</label>
-            <button onClick={deleteItem}>X</button>
+            > {note}</div>
+            <button className='deletButton' onClick={deleteItem}></button>
         </div>
     );
 }
